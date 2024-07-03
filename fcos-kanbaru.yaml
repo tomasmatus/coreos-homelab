@@ -1,0 +1,18 @@
+variant: fcos
+version: 1.5.0
+passwd:
+  users:
+    - name: admintom
+      ssh_authorized_keys:
+        - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGc+xgFjSPHFQL9efNO+UuxksgXZ4k0lNXKHpFWoJOku tom@mayoi
+      home_dir: /home/admintom
+      groups:
+        - wheel
+      shell: /bin/bash
+
+storage:
+  files:
+    - path: /etc/hostname
+      mode: 0644
+      contents:
+        inline: kanbaru
