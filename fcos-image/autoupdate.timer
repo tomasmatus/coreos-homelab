@@ -1,0 +1,8 @@
+[Unit]
+Description=Automatic update of fcos
+
+[Install]
+WantedBy=default.target
+
+[Timer]
+OnCalendar=Mon 5:00:00

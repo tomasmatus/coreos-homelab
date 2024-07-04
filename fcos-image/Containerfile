@@ -1,5 +1,7 @@
 FROM quay.io/fedora/fedora-coreos:stable
 
+COPY autoupdate.service /etc/systemd/system/autoupdate.service
+
 RUN rpm-ostree install \
       cockpit \
       cockpit-podman \

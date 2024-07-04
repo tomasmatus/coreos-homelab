@@ -1,0 +1,10 @@
+[Unit]
+Description=Upgrader - scheduled upgrades for CoreOS
+After=network-online.target
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rpm-ostree upgrade
