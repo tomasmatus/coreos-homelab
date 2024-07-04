@@ -5,3 +5,5 @@ RUN rpm-ostree install \
       cockpit-podman \
       cockpit-selinux \
       cockpit-networkmanager
+
+RUN ostree container commit

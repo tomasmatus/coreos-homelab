@@ -15,4 +15,10 @@ storage:
     - path: /etc/hostname
       mode: 0644
       contents:
-        inline: kanbaru
+        inline: kanbaru.local
+
+# systemd:
+#   units:
+#     - name:
+#       enabled: true
+#       contents_local:
