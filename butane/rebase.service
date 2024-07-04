@@ -10,6 +10,6 @@ WantedBy=default.target
 [Service]
 After=ignition-firstboot-complete.service
 Type=oneshot
-ExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-unverified-registry:{image link here}
+ExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-unverified-registry:ghcr.io/tomasmatus/coreos-homelab:latest
 ExecStart=/usr/bin/systemctl disable rebase.service
-ExecStart/usr/bin/systemctl reboot
+ExecStart=/usr/bin/systemctl reboot
