@@ -1,7 +1,8 @@
 # About
 
 Currently this servers as a personal playground to test out the world
-of immutable distributions and an automated, code first deployment of services.
+of immutable distributions and an automated,
+code-first (Infrastructure As a Code?) deployment.
 
 # Useful links
 
