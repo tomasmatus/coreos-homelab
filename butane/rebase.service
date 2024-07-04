@@ -1,0 +1,15 @@
+[Unit]
+Description=Rebase to custom fcos image at the end of ignition installation
+ConditionFirstBoot=true
+After=network.target
+Wants=network.target
+
+[Install]
+WantedBy=default.target
+
+[Service]
+After=ignition-firstboot-complete.service
+Type=oneshot
+ExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-unverified-registry:{image link here}
+ExecStart=/usr/bin/systemctl disable rebase.service
+ExecStart/usr/bin/systemctl reboot

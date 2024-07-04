@@ -17,8 +17,8 @@ storage:
       contents:
         inline: kanbaru.local
 
-# systemd:
-#   units:
-#     - name:
-#       enabled: true
-#       contents_local:
+systemd:
+  units:
+    - name: rebase.service
+      enabled: true
+      contents_local: rebase.service
