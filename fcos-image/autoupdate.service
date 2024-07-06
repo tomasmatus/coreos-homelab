@@ -1,5 +1,5 @@
 [Unit]
-Description=Upgrader - scheduled upgrades for CoreOS
+Description=Automatic update of fcos
 After=network-online.target
 
 [Install]

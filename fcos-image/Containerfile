@@ -1,6 +1,7 @@
 FROM quay.io/fedora/fedora-coreos:stable
 
 COPY autoupdate.service /etc/systemd/system/autoupdate.service
+COPY autoupdate.timer /etc/systemd/system/autoupdate.timer
 
 RUN rpm-ostree install \
       cockpit \
