@@ -6,7 +6,9 @@
     "users": [
       {
         "groups": [
-          "wheel"
+          "wheel",
+          "sudo",
+          "systemd-journal"
         ],
         "homeDir": "/home/admintom",
         "name": "admintom",
