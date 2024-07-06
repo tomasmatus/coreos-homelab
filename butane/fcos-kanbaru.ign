@@ -1,0 +1,41 @@
+{
+  "ignition": {
+    "version": "3.4.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "groups": [
+          "wheel"
+        ],
+        "homeDir": "/home/admintom",
+        "name": "admintom",
+        "sshAuthorizedKeys": [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGc+xgFjSPHFQL9efNO+UuxksgXZ4k0lNXKHpFWoJOku tom@mayoi"
+        ],
+        "shell": "/bin/bash"
+      }
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/hostname",
+        "contents": {
+          "compression": "",
+          "source": "data:,kanbaru.local"
+        },
+        "mode": 420
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "contents": "[Unit]\nDescription=Rebase to custom fcos image at the end of ignition installation\nConditionFirstBoot=true\nAfter=network.target\nWants=network.target\n\n[Install]\nWantedBy=default.target\n\n[Service]\nAfter=ignition-firstboot-complete.service\nType=oneshot\nExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-unverified-registry:ghcr.io/tomasmatus/coreos-homelab:latest\nExecStart=/usr/bin/systemctl disable rebase.service\nExecStart=/usr/bin/systemctl reboot\n",
+        "enabled": true,
+        "name": "rebase.service"
+      }
+    ]
+  }
+}
