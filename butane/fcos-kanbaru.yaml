@@ -5,6 +5,7 @@ passwd:
     - name: admintom
       ssh_authorized_keys:
         - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGc+xgFjSPHFQL9efNO+UuxksgXZ4k0lNXKHpFWoJOku tom@mayoi
+      password_hash: $y$j9T$AxnIXVJjKaTJz6nSk2xlE/$4HMYdc9lkbAK/DhO.oZm2nUaZ8j1uf.t5bCkX0o.aD1
       home_dir: /home/admintom
       groups:
         - wheel
