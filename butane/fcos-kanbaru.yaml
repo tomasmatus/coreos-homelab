@@ -9,6 +9,8 @@ passwd:
       home_dir: /home/admintom
       groups:
         - wheel
+        - sudo
+        - systemd-journal
       shell: /bin/bash
 
 storage:
