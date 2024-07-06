@@ -1,8 +1,8 @@
 [Unit]
 Description=Rebase to custom fcos image at the end of ignition installation
 ConditionFirstBoot=true
-After=network.target
-Wants=network.target
+Wants=network-online.target
+After=network-online.target
 
 [Install]
 WantedBy=default.target
