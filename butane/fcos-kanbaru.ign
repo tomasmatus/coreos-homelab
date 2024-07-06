@@ -35,7 +35,7 @@
   "systemd": {
     "units": [
       {
-        "contents": "[Unit]\nDescription=Rebase to custom fcos image at the end of ignition installation\nConditionFirstBoot=true\nWants=network-online.target\nAfter=network-online.target\n\n[Install]\nWantedBy=default.target\n\n[Service]\nAfter=ignition-firstboot-complete.service\nType=oneshot\nExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-unverified-registry:ghcr.io/tomasmatus/coreos-homelab:latest\nExecStart=/usr/bin/systemctl disable rebase.service\nExecStart=/usr/bin/systemctl reboot\n",
+        "contents": "[Unit]\nDescription=Rebase to custom fcos image at the end of ignition installation\nConditionFirstBoot=true\nWants=network-online.target\nAfter=network-online.target\n\n[Install]\nWantedBy=default.target\n\n[Service]\nAfter=ignition-firstboot-complete.service\nType=oneshot\nExecStartPre=/usr/bin/systemctl disable zincati.service\nExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-unverified-registry:ghcr.io/tomasmatus/coreos-homelab:latest\nExecStart=/usr/bin/systemctl disable rebase.service\nExecStart=/usr/bin/systemctl reboot\n",
         "enabled": true,
         "name": "rebase.service"
       }
