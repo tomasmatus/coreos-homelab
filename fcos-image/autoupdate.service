@@ -7,4 +7,4 @@ WantedBy=default.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/rpm-ostree upgrade
+ExecStart=/usr/bin/rpm-ostree upgrade --reboot
