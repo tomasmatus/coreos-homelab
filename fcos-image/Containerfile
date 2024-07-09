@@ -4,6 +4,7 @@ COPY autoupdate.service /etc/systemd/system/autoupdate.service
 COPY autoupdate.timer /etc/systemd/system/autoupdate.timer
 COPY mnt-media.mount /etc/systemd/system/mnt-media.mount
 
+COPY containers/homelab.network /etc/containers/systemd/1001/homelab.network
 COPY containers/nextcloud/nextcloud-kube.yaml /etc/containers/systemd/1001/nextcloud-kube.yaml
 COPY containers/nextcloud/nextcloud-kube.kube /etc/containers/systemd/1001/nextcloud-kube.kube
 
