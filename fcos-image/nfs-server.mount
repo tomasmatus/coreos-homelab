@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount media from nfs server
+Requires=network.target
+After=network.target
+
+[Install]
+WantedBy=default.target
+
+[Mount]
+What=192.168.88.13:/mnt/tank/media
+Where=/mnt/media
+Type=nfs
+Options=rw,async,noatime,_netdev,auto
