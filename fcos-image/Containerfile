@@ -2,6 +2,10 @@ FROM quay.io/fedora/fedora-coreos:stable
 
 COPY autoupdate.service /etc/systemd/system/autoupdate.service
 COPY autoupdate.timer /etc/systemd/system/autoupdate.timer
+COPY nfs-server.mount /etc/systemd/system/nfs-server.mount
+
+COPY containers/nextcloud/nextcloud-kube.yaml /home/admintom/.config/containers/systemd/
+COPY containers/nextcloud/nextcloud-kube.kube /home/admintom/.config/containers/systemd/
 
 RUN rpm-ostree install \
       cockpit \
