@@ -1,3 +1,4 @@
 [submodule "fcos-image/containers-homelab"]
 	path = fcos-image/containers-homelab
 	url = git@github.com:tomasmatus/containers-homelab.git
+	branch = master
