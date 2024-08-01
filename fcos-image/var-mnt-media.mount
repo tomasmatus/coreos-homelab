@@ -8,6 +8,6 @@ WantedBy=default.target
 
 [Mount]
 What=192.168.88.13:/mnt/tank/media
-Where=/mnt/media
+Where=/var/mnt/media
 Type=nfs
 Options=rw,async,noatime,_netdev,auto
