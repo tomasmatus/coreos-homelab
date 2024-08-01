@@ -4,7 +4,7 @@ COPY autoupdate.service /etc/systemd/system/autoupdate.service
 COPY autoupdate.timer /etc/systemd/system/autoupdate.timer
 COPY var-mnt-media.mount /etc/systemd/system/var-mnt-media.mount
 
-COPY containers-homelab/ /home/admintom/.config/containers/systemd/containers-homelab/
+COPY containers-homelab /home/admintom/.config/containers/systemd/containers-homelab/
 
 RUN rpm-ostree install \
       cockpit \
