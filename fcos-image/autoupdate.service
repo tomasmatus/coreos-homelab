@@ -1,6 +1,7 @@
 [Unit]
 Description=Automatic update of fcos
 After=network-online.target
+Requires=network-online.target
 
 [Install]
 WantedBy=default.target
