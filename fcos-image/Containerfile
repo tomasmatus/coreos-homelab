@@ -13,8 +13,8 @@ RUN rpm-ostree install \
       cockpit-networkmanager \
       cockpit-files \
       cockpit-ostree \
-      cockpit-pcp \
       cockpit-storaged \
+      python3-pcp \
       btop
 
 RUN ostree container commit
